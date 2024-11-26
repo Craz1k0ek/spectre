@@ -3,7 +3,7 @@
 // Cards
 .card {
   background: variables.$bg-color-light;
-  border: variables.$border-width solid variables.$border-color;
+  box-shadow: 0 0.25rem 1rem rgba(variables.$dark-color, 0.15);
   border-radius: variables.$border-radius;
   display: flex;
   flex-direction: column;
