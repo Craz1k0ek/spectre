@@ -24,16 +24,10 @@
     "url": "https://github.com/picturepan2/spectre/issues"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-csscomb": "^3.1.0",
-    "gulp-pug": "^5.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.69.0",
-    "jstransformer-highlight": "^2.0.0",
-    "jstransformer-markdown-it": "^2.1.0"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.81.0"
   },
   "browserslist": [
     "last 2 Chrome versions",
@@ -42,5 +36,11 @@
     "last 2 Safari versions",
     "last 2 Opera versions",
     "not IE 11"
-  ]
+  ],
+  "scripts": {
+    "build:css": "sass src/spectre.scss:dist/spectre.css src/spectre-exp.scss:dist/spectre-exp.css src/spectre-icons.scss:dist/spectre-icons.css --no-source-map",
+    "build:min": "sass src/spectre.scss:dist/spectre.min.css src/spectre-exp.scss:dist/spectre-exp.min.css src/spectre-icons.scss:dist/spectre-icons.min.css --style compressed --no-source-map",
+    "prefix": "postcss dist/*.css --replace",
+    "build": "npm run build:css && npm run build:min && npm run prefix"
+  }
 }
