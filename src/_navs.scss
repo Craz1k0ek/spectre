@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Navs
 .nav {
   display: flex;
@@ -17,7 +19,7 @@
     }
     &.active {
       & > a {
-        color: darken($gray-color-dark, 10%);
+        color: color.adjust($gray-color-dark, $lightness: -10%, $space: hsl);
         font-weight: bold;
         &:focus,
         &:hover {
