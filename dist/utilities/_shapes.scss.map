@@ -1,0 +1,1 @@
+{"version":3,"sources":["utilities/_shapes.scss"],"names":[],"mappings":"AAAA,WAAW,mBAAmB,CAAC,UAAU,iBAAiB","file":"utilities/_shapes.scss","sourcesContent":[".s-rounded{border-radius:.1rem}.s-circle{border-radius:50%}"]}
